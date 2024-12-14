@@ -2,7 +2,7 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "\\about\n",
+    "content": "\\about\nshow DATABASES\n",
     "options": {
         "tabSize": 4,
         "indentSize": 4,
@@ -15,11 +15,11 @@
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 2,
+                    "lineNumber": 3,
                     "column": 1
                 },
                 "position": {
-                    "lineNumber": 2,
+                    "lineNumber": 3,
                     "column": 1
                 }
             }
@@ -73,6 +73,102 @@
             "state": {
                 "start": 2,
                 "end": 2,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "26cb6e31-cd7e-4e88-db35-71fedd3bd180"
+                    ]
+                },
+                "currentHeight": 328.796875,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 14
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "79e00082-55ac-4036-9f8e-f04def6a5574",
+                    "resultId": "26cb6e31-cd7e-4e88-db35-71fedd3bd180",
+                    "rows": [
+                        {
+                            "0": "credit_info"
+                        },
+                        {
+                            "0": "data"
+                        },
+                        {
+                            "0": "information_schema"
+                        },
+                        {
+                            "0": "joins_practice"
+                        },
+                        {
+                            "0": "mysql"
+                        },
+                        {
+                            "0": "new"
+                        },
+                        {
+                            "0": "new-table"
+                        },
+                        {
+                            "0": "performance_schema"
+                        },
+                        {
+                            "0": "sakila"
+                        },
+                        {
+                            "0": "sys"
+                        },
+                        {
+                            "0": "world"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Database",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 11 records retrieved in 1.73ms"
+                    },
+                    "totalRowCount": 11,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "show DATABASES",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 3,
+                "end": 3,
                 "language": "mysql",
                 "currentSet": 1,
                 "statements": [
