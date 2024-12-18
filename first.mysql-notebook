@@ -2,7 +2,7 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "\\about\nshow DATABASES\nuse data\nshow TABLES\nselect *from customer_table\nSELECT COUNT(id) as \"total no of id \" from customer_table\nSELECT SUM(id) as \"sum of id\" from customer_table\nSELECT AVG(id) as \"avg of id\" from customer_table\nUPDATE  customer_table set  id= 22 where   name =\"akriti\"\nSELECT  *from customer_table\n// How to select common records from two tables? \n// What aggregate functions do you know? write a program about how to use them \n// show the entire table data  in dec order \n",
+    "content": "\\about\nshow DATABASES\nuse data\nshow TABLES\nselect *from customer_table\nSELECT COUNT(id) as \"total no of id \" from customer_table\nSELECT SUM(id) as \"sum of id\" from customer_table\nSELECT AVG(id) as \"avg of id\" from customer_table\nUPDATE  customer_table set  id= 22 where   name =\"akriti\"\nSELECT  *from customer_table\n// How to select common records from two tables? \n// What aggregate functions do you know? write a program about how to use them \n// show the entire table data  in dec order \nSELECT *from call_data;\nselect  *from call_data ORDER BY company DESC\nSELECT  cu.name,c.company from customer_table cu INNER join \ncall_data c on cu.id=c.csr_id\nSELECT id,name from customer_table\nINTERSECT \nselect  csr_id,company from call_data;\n",
     "options": {
         "tabSize": 4,
         "indentSize": 4,
@@ -15,22 +15,22 @@
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 13,
-                    "column": 45
+                    "lineNumber": 20,
+                    "column": 39
                 },
                 "position": {
-                    "lineNumber": 13,
-                    "column": 45
+                    "lineNumber": 20,
+                    "column": 39
                 }
             }
         ],
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 6,
+                "lineNumber": 18,
                 "column": 1
             },
-            "firstPositionDeltaTop": 168
+            "firstPositionDeltaTop": 218
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -77,7 +77,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "1431ce8e-725b-425b-c619-213954c5c75d"
+                        "704ed3d7-f047-4ed3-e963-0feaddc8a47a"
                     ]
                 },
                 "currentHeight": 328.796875,
@@ -96,8 +96,8 @@
             },
             "data": [
                 {
-                    "tabId": "aa159c5e-befd-4054-ef2a-1c825326653a",
-                    "resultId": "1431ce8e-725b-425b-c619-213954c5c75d",
+                    "tabId": "5691f67c-64f7-4b7d-f7fd-997de24269f3",
+                    "resultId": "704ed3d7-f047-4ed3-e963-0feaddc8a47a",
                     "rows": [
                         {
                             "0": "credit_info"
@@ -154,7 +154,7 @@
                         }
                     ],
                     "executionInfo": {
-                        "text": "OK, 11 records retrieved in 1.73ms"
+                        "text": "OK, 11 records retrieved in 7.286ms"
                     },
                     "totalRowCount": 11,
                     "hasMoreRows": false,
@@ -176,8 +176,8 @@
                         {
                             "type": 4,
                             "index": 0,
-                            "resultId": "8dd0c5ec-5616-4858-a7f5-9656af0de54f",
-                            "content": "OK, 0 records retrieved in 0.999ms"
+                            "resultId": "857048f0-f971-4a09-c549-cbe18c0b1f0f",
+                            "content": "OK, 0 records retrieved in 2.049ms"
                         }
                     ]
                 },
@@ -205,7 +205,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "04082a11-c36a-49c9-b3ac-81b44dace1a2"
+                        "4ad5c1e2-e679-4503-cfcb-9e7f063e884e"
                     ]
                 },
                 "currentHeight": 36,
@@ -224,8 +224,8 @@
             },
             "data": [
                 {
-                    "tabId": "aa159c5e-befd-4054-ef2a-1c825326653a",
-                    "resultId": "04082a11-c36a-49c9-b3ac-81b44dace1a2",
+                    "tabId": "5691f67c-64f7-4b7d-f7fd-997de24269f3",
+                    "resultId": "4ad5c1e2-e679-4503-cfcb-9e7f063e884e",
                     "rows": [
                         {
                             "0": "call_data"
@@ -286,7 +286,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "2950babb-bb92-4a3e-d343-9d67359d08ba"
+                        "19785b3a-9a16-465f-d36a-cf4c43b56ca7"
                     ]
                 },
                 "currentHeight": 351.984375,
@@ -305,8 +305,8 @@
             },
             "data": [
                 {
-                    "tabId": "aa159c5e-befd-4054-ef2a-1c825326653a",
-                    "resultId": "2950babb-bb92-4a3e-d343-9d67359d08ba",
+                    "tabId": "5691f67c-64f7-4b7d-f7fd-997de24269f3",
+                    "resultId": "19785b3a-9a16-465f-d36a-cf4c43b56ca7",
                     "rows": [
                         {
                             "0": 111,
@@ -770,7 +770,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "539701cb-6edf-467a-8016-835491a9bd0d"
+                        "b7a81382-2efb-4135-96e2-eafcd7b3110a"
                     ]
                 },
                 "currentHeight": 91.1875,
@@ -789,8 +789,8 @@
             },
             "data": [
                 {
-                    "tabId": "aa159c5e-befd-4054-ef2a-1c825326653a",
-                    "resultId": "539701cb-6edf-467a-8016-835491a9bd0d",
+                    "tabId": "5691f67c-64f7-4b7d-f7fd-997de24269f3",
+                    "resultId": "b7a81382-2efb-4135-96e2-eafcd7b3110a",
                     "rows": [
                         {
                             "0": 100
@@ -839,7 +839,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "37c9f958-e3b3-4295-d9dc-b114517d2afc"
+                        "ab3e7339-d651-4edc-8977-f3aecb94c5d4"
                     ]
                 },
                 "currentHeight": 91.1875,
@@ -858,8 +858,8 @@
             },
             "data": [
                 {
-                    "tabId": "aa159c5e-befd-4054-ef2a-1c825326653a",
-                    "resultId": "37c9f958-e3b3-4295-d9dc-b114517d2afc",
+                    "tabId": "5691f67c-64f7-4b7d-f7fd-997de24269f3",
+                    "resultId": "ab3e7339-d651-4edc-8977-f3aecb94c5d4",
                     "rows": [
                         {
                             "0": "16050"
@@ -910,7 +910,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "ab4a677e-4520-43de-99b1-b8de3d5609cf"
+                        "f1e5d509-a987-4b38-8f02-0328f227a6ca"
                     ]
                 },
                 "currentHeight": 91.1875,
@@ -929,8 +929,8 @@
             },
             "data": [
                 {
-                    "tabId": "aa159c5e-befd-4054-ef2a-1c825326653a",
-                    "resultId": "ab4a677e-4520-43de-99b1-b8de3d5609cf",
+                    "tabId": "5691f67c-64f7-4b7d-f7fd-997de24269f3",
+                    "resultId": "f1e5d509-a987-4b38-8f02-0328f227a6ca",
                     "rows": [
                         {
                             "0": "160.5000"
@@ -1013,7 +1013,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "549d7bdf-f01f-441f-f8db-cfe3b33cddc9"
+                        "0045fb7f-3176-4acf-f3df-5951556254b8"
                     ]
                 },
                 "currentHeight": 347.989990234375,
@@ -1032,8 +1032,8 @@
             },
             "data": [
                 {
-                    "tabId": "aa159c5e-befd-4054-ef2a-1c825326653a",
-                    "resultId": "549d7bdf-f01f-441f-f8db-cfe3b33cddc9",
+                    "tabId": "5691f67c-64f7-4b7d-f7fd-997de24269f3",
+                    "resultId": "0045fb7f-3176-4acf-f3df-5951556254b8",
                     "rows": [
                         {
                             "0": 22,
@@ -1492,7 +1492,1018 @@
         {
             "state": {
                 "start": 11,
+                "end": 13,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 0,
+                            "index": 0,
+                            "content": "MySQL Error (1064): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '// How to select common records from two tables? \n// What aggregate functions do' at line 1",
+                            "language": "ansi"
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": ""
+                    }
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 174
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 14,
                 "end": 14,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "7b5afbe0-856a-4340-e19e-315c05efd14c"
+                    ]
+                },
+                "currentHeight": 36,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 23
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "5691f67c-64f7-4b7d-f7fd-997de24269f3",
+                    "resultId": "7b5afbe0-856a-4340-e19e-315c05efd14c",
+                    "rows": [
+                        {
+                            "0": 8047,
+                            "1": "2024-10-20 19:35:56",
+                            "2": 170,
+                            "3": 25,
+                            "4": 125,
+                            "5": 207,
+                            "6": 161,
+                            "7": 86,
+                            "8": 3,
+                            "9": 3
+                        },
+                        {
+                            "0": 8048,
+                            "1": "2024-10-20 19:35:58",
+                            "2": 126,
+                            "3": 23,
+                            "4": 120,
+                            "5": 159,
+                            "6": 95,
+                            "7": 382,
+                            "8": 1,
+                            "9": 6
+                        },
+                        {
+                            "0": 8049,
+                            "1": "2024-10-20 19:36:00",
+                            "2": 178,
+                            "3": 26,
+                            "4": 117,
+                            "5": 159,
+                            "6": 261,
+                            "7": 328,
+                            "8": 4,
+                            "9": 3
+                        },
+                        {
+                            "0": 8050,
+                            "1": "2024-10-20 19:36:02",
+                            "2": 169,
+                            "3": 23,
+                            "4": 119,
+                            "5": 117,
+                            "6": 126,
+                            "7": 316,
+                            "8": 1,
+                            "9": 8
+                        },
+                        {
+                            "0": 8051,
+                            "1": "2024-10-20 19:36:04",
+                            "2": 126,
+                            "3": 27,
+                            "4": 127,
+                            "5": 124,
+                            "6": 243,
+                            "7": 508,
+                            "8": 2,
+                            "9": 6
+                        },
+                        {
+                            "0": 8052,
+                            "1": "2024-10-20 19:36:06",
+                            "2": 114,
+                            "3": 13,
+                            "4": 118,
+                            "5": 116,
+                            "6": 10,
+                            "7": 339,
+                            "8": 1,
+                            "9": 5
+                        },
+                        {
+                            "0": 8053,
+                            "1": "2024-10-20 19:36:08",
+                            "2": 176,
+                            "3": 14,
+                            "4": 118,
+                            "5": 161,
+                            "6": 167,
+                            "7": 191,
+                            "8": 1,
+                            "9": 6
+                        },
+                        {
+                            "0": 8054,
+                            "1": "2024-10-20 19:36:10",
+                            "2": 115,
+                            "3": 15,
+                            "4": 118,
+                            "5": 141,
+                            "6": 182,
+                            "7": 507,
+                            "8": 2,
+                            "9": 4
+                        },
+                        {
+                            "0": 8055,
+                            "1": "2024-10-20 19:36:12",
+                            "2": 186,
+                            "3": 11,
+                            "4": 126,
+                            "5": 178,
+                            "6": 15,
+                            "7": 126,
+                            "8": 4,
+                            "9": 2
+                        },
+                        {
+                            "0": 8057,
+                            "1": "2024-10-20 19:36:16",
+                            "2": 146,
+                            "3": 25,
+                            "4": 128,
+                            "5": 123,
+                            "6": 9,
+                            "7": 433,
+                            "8": 4,
+                            "9": 3
+                        },
+                        {
+                            "0": 8058,
+                            "1": "2024-10-20 19:36:18",
+                            "2": 165,
+                            "3": 26,
+                            "4": 117,
+                            "5": 171,
+                            "6": 202,
+                            "7": 199,
+                            "8": 1,
+                            "9": 5
+                        },
+                        {
+                            "0": 8060,
+                            "1": "2024-10-20 19:36:22",
+                            "2": 191,
+                            "3": 12,
+                            "4": 126,
+                            "5": 198,
+                            "6": 212,
+                            "7": 290,
+                            "8": 1,
+                            "9": 9
+                        },
+                        {
+                            "0": 8061,
+                            "1": "2024-10-20 19:36:24",
+                            "2": 138,
+                            "3": 21,
+                            "4": 117,
+                            "5": 126,
+                            "6": 230,
+                            "7": 92,
+                            "8": 1,
+                            "9": 5
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": true,
+                            "nullable": false,
+                            "autoIncrement": true
+                        },
+                        {
+                            "title": "date",
+                            "field": "1",
+                            "dataType": {
+                                "type": 26,
+                                "dateTimePrecision": 8,
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "location_id",
+                            "field": "2",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "company",
+                            "field": "3",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "issue_id",
+                            "field": "4",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "csr_id",
+                            "field": "5",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "response_time",
+                            "field": "6",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "call_time",
+                            "field": "7",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "status",
+                            "field": "8",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "rating",
+                            "field": "9",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 13 records retrieved in 64.959ms"
+                    },
+                    "totalRowCount": 13,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT *from call_data",
+                    "updatable": true,
+                    "fullTableName": "call_data"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 15,
+                "end": 15,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "fee4758a-add1-40e0-e9ee-c4b759986e8c"
+                    ]
+                },
+                "currentHeight": 36,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 45
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "5691f67c-64f7-4b7d-f7fd-997de24269f3",
+                    "resultId": "fee4758a-add1-40e0-e9ee-c4b759986e8c",
+                    "rows": [
+                        {
+                            "0": 8051,
+                            "1": "2024-10-20 19:36:04",
+                            "2": 126,
+                            "3": 27,
+                            "4": 127,
+                            "5": 124,
+                            "6": 243,
+                            "7": 508,
+                            "8": 2,
+                            "9": 6
+                        },
+                        {
+                            "0": 8049,
+                            "1": "2024-10-20 19:36:00",
+                            "2": 178,
+                            "3": 26,
+                            "4": 117,
+                            "5": 159,
+                            "6": 261,
+                            "7": 328,
+                            "8": 4,
+                            "9": 3
+                        },
+                        {
+                            "0": 8058,
+                            "1": "2024-10-20 19:36:18",
+                            "2": 165,
+                            "3": 26,
+                            "4": 117,
+                            "5": 171,
+                            "6": 202,
+                            "7": 199,
+                            "8": 1,
+                            "9": 5
+                        },
+                        {
+                            "0": 8047,
+                            "1": "2024-10-20 19:35:56",
+                            "2": 170,
+                            "3": 25,
+                            "4": 125,
+                            "5": 207,
+                            "6": 161,
+                            "7": 86,
+                            "8": 3,
+                            "9": 3
+                        },
+                        {
+                            "0": 8057,
+                            "1": "2024-10-20 19:36:16",
+                            "2": 146,
+                            "3": 25,
+                            "4": 128,
+                            "5": 123,
+                            "6": 9,
+                            "7": 433,
+                            "8": 4,
+                            "9": 3
+                        },
+                        {
+                            "0": 8048,
+                            "1": "2024-10-20 19:35:58",
+                            "2": 126,
+                            "3": 23,
+                            "4": 120,
+                            "5": 159,
+                            "6": 95,
+                            "7": 382,
+                            "8": 1,
+                            "9": 6
+                        },
+                        {
+                            "0": 8050,
+                            "1": "2024-10-20 19:36:02",
+                            "2": 169,
+                            "3": 23,
+                            "4": 119,
+                            "5": 117,
+                            "6": 126,
+                            "7": 316,
+                            "8": 1,
+                            "9": 8
+                        },
+                        {
+                            "0": 8061,
+                            "1": "2024-10-20 19:36:24",
+                            "2": 138,
+                            "3": 21,
+                            "4": 117,
+                            "5": 126,
+                            "6": 230,
+                            "7": 92,
+                            "8": 1,
+                            "9": 5
+                        },
+                        {
+                            "0": 8054,
+                            "1": "2024-10-20 19:36:10",
+                            "2": 115,
+                            "3": 15,
+                            "4": 118,
+                            "5": 141,
+                            "6": 182,
+                            "7": 507,
+                            "8": 2,
+                            "9": 4
+                        },
+                        {
+                            "0": 8053,
+                            "1": "2024-10-20 19:36:08",
+                            "2": 176,
+                            "3": 14,
+                            "4": 118,
+                            "5": 161,
+                            "6": 167,
+                            "7": 191,
+                            "8": 1,
+                            "9": 6
+                        },
+                        {
+                            "0": 8052,
+                            "1": "2024-10-20 19:36:06",
+                            "2": 114,
+                            "3": 13,
+                            "4": 118,
+                            "5": 116,
+                            "6": 10,
+                            "7": 339,
+                            "8": 1,
+                            "9": 5
+                        },
+                        {
+                            "0": 8060,
+                            "1": "2024-10-20 19:36:22",
+                            "2": 191,
+                            "3": 12,
+                            "4": 126,
+                            "5": 198,
+                            "6": 212,
+                            "7": 290,
+                            "8": 1,
+                            "9": 9
+                        },
+                        {
+                            "0": 8055,
+                            "1": "2024-10-20 19:36:12",
+                            "2": 186,
+                            "3": 11,
+                            "4": 126,
+                            "5": 178,
+                            "6": 15,
+                            "7": 126,
+                            "8": 4,
+                            "9": 2
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": true,
+                            "nullable": false,
+                            "autoIncrement": true
+                        },
+                        {
+                            "title": "date",
+                            "field": "1",
+                            "dataType": {
+                                "type": 26,
+                                "dateTimePrecision": 8,
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "location_id",
+                            "field": "2",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "company",
+                            "field": "3",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "issue_id",
+                            "field": "4",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "csr_id",
+                            "field": "5",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "response_time",
+                            "field": "6",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "call_time",
+                            "field": "7",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "status",
+                            "field": "8",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "rating",
+                            "field": "9",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 13 records retrieved in 1.003ms"
+                    },
+                    "totalRowCount": 13,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "select  *from call_data ORDER BY company DESC",
+                    "updatable": true,
+                    "fullTableName": "call_data"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 16,
+                "end": 17,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "58472497-c589-40be-bdc3-f437916468ef"
+                    ]
+                },
+                "currentHeight": 352,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 90
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "5691f67c-64f7-4b7d-f7fd-997de24269f3",
+                    "resultId": "58472497-c589-40be-bdc3-f437916468ef",
+                    "rows": [
+                        {
+                            "0": " Benjamin Wilson",
+                            "1": 13
+                        },
+                        {
+                            "0": " Natalie Patel",
+                            "1": 23
+                        },
+                        {
+                            "0": " Ava Taylor",
+                            "1": 25
+                        },
+                        {
+                            "0": " Daniel Hernandez",
+                            "1": 27
+                        },
+                        {
+                            "0": " Ethan Lewis",
+                            "1": 21
+                        },
+                        {
+                            "0": " Victoria Johnson",
+                            "1": 15
+                        },
+                        {
+                            "0": " Emily Turner",
+                            "1": 26
+                        },
+                        {
+                            "0": " Emily Turner",
+                            "1": 23
+                        },
+                        {
+                            "0": " Samantha Jackson",
+                            "1": 14
+                        },
+                        {
+                            "0": " Sophia Hernandez",
+                            "1": 26
+                        },
+                        {
+                            "0": " Benjamin Green",
+                            "1": 11
+                        },
+                        {
+                            "0": " Elizabeth Green",
+                            "1": 12
+                        },
+                        {
+                            "0": " Ethan Smith",
+                            "1": 25
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "name",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "company",
+                            "field": "1",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 13 records retrieved in 2.029ms"
+                    },
+                    "totalRowCount": 13,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT  cu.name,c.company from customer_table cu INNER join \ncall_data c on cu.id=c.csr_id",
+                    "updatable": false,
+                    "fullTableName": ""
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 18,
+                "end": 20,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "e08381b7-065f-4dc8-a838-0f0f1512b0ef",
+                            "content": "OK, 0 records retrieved in 0.999ms"
+                        }
+                    ]
+                },
+                "currentHeight": 352,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 84
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 21,
+                "end": 21,
                 "language": "mysql",
                 "currentSet": 1,
                 "statements": [
@@ -1500,10 +2511,10 @@
                         "delimiter": ";",
                         "span": {
                             "start": 0,
-                            "length": 175
+                            "length": 0
                         },
                         "contentStart": 0,
-                        "state": 3
+                        "state": 0
                     }
                 ]
             },
