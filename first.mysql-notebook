@@ -2,7 +2,7 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "\\about\nshow DATABASES\nuse data\nshow TABLES\n\nSELECT COUNT(id) as \"total no of id \" from customer_table\nSELECT SUM(id) as \"sum of id\" from customer_table\nSELECT AVG(id) as \"avg of id\" from customer_table\nUPDATE  customer_table set  id= 22 where   name =\"akriti\"\nSELECT  *from customer_table\n// How to select common records from two tables? \n// What aggregate functions do you know? write a program about how to use them \n// show the entire table data  in dec order \nSELECT *from call_data;\nselect  *from call_data ORDER BY company DESC\nSELECT  cu.name,c.company from customer_table cu INNER join \ncall_data c on cu.id=c.csr_id\nSELECT id,name from customer_table\nINTERSECT \nselect  csr_id,company from call_data;\nDESCRIBE TABLE data\nCREATE TABLE Customers ( customer_id INT PRIMARY KEY, customer_name VARCHAR(50), country VARCHAR(50) );\nCREATE TABLE Orders ( order_id INT PRIMARY KEY, order_date DATE, customer_id INT, amount DECIMAL(10, 2), FOREIGN KEY (customer_id) REFERENCES Customers(customer_id) );\nINSERT INTO Customers (customer_id, customer_name, country) VALUES (1, 'Alice', 'USA'), (2, 'Bob', 'Canada'), (3, 'Charlie', 'UK'), (4, 'David', 'Australia'), (5, 'Eve', 'India');\nINSERT INTO Orders (order_id, order_date, customer_id, amount) VALUES (101, '2024-01-15', 1, 250.00), (102, '2024-02-17', 2, 150.00), (103, '2024-03-20', 3, 200.00), (104, '2024-04-25', 4, 300.00), (105, '2024-05-28', 2, 130.00), (106, '2024-06-30', 3, 220.00);\nshow TABLES\ndrop table customers;\nALTER TABLE Orders DROP FOREIGN KEY orders_ibfk_1;\n\nDROP TABLE Orders;\nDROP TABLE Customers;\n\nshow tables;\ncreate DATABASE  join1\nCREATE TABLE Customers (\n    customer_id INT PRIMARY KEY,\n    customer_name VARCHAR(50),\n    country VARCHAR(50)\n);\n\nINSERT INTO Customers (customer_id, customer_name, country) VALUES\n(1, 'Alice', 'USA'),\n(2, 'Bob', 'Canada'),\n(3, 'Charlie', 'UK'),\n(4, 'David', 'Australia'),\n(5, 'Eve', 'India');\n\nCREATE TABLE Orders (\n    order_id INT PRIMARY KEY,\n    order_date DATE,\n    customer_id INT,\n    amount DECIMAL(10, 2),\n    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)\n);\n\nINSERT INTO Orders (order_id, order_date, customer_id, amount) VALUES\n(101, '2024-01-15', 1, 250.00),\n(102, '2024-02-17', 2, 150.00),\n(103, '2024-03-20', 3, 200.00),\n(104, '2024-04-25', 4, 300.00),\n(105, '2024-05-28', 2, 130.00),\n(106, '2024-06-30', 3, 220.00);\n\n\nselect  customers.customer_name , orders.order_id\nfrom customers \nCROSS JOIN  orders\nselect customers.customer_name,orders.order_id,orders.amount\nfrom customers\nINNER JOIN orders on customers.customer_id= orders.customer_id\nSELECT Customers.customer_name, Orders.order_id, Orders.amount\nFROM Customers\nLEFT JOIN Orders ON Customers.customer_id = Orders.customer_id;\n\n",
+    "content": "\\about\nshow DATABASES\nuse data\nshow TABLES\n\nSELECT COUNT(id) as \"total no of id \" from customer_table\nSELECT SUM(id) as \"sum of id\" from customer_table\nSELECT AVG(id) as \"avg of id\" from customer_table\nUPDATE  customer_table set  id= 22 where   name =\"akriti\"\nSELECT  *from customer_table\n// How to select common records from two tables? \n// What aggregate functions do you know? write a program about how to use them \n// show the entire table data  in dec order \nSELECT *from call_data;\nselect  *from call_data ORDER BY company DESC\nSELECT  cu.name,c.company from customer_table cu INNER join \ncall_data c on cu.id=c.csr_id\nSELECT id,name from customer_table\nINTERSECT \nselect  csr_id,company from call_data;\nDESCRIBE TABLE data\nCREATE TABLE Customers ( customer_id INT PRIMARY KEY, customer_name VARCHAR(50), country VARCHAR(50) );\nCREATE TABLE Orders ( order_id INT PRIMARY KEY, order_date DATE, customer_id INT, amount DECIMAL(10, 2), FOREIGN KEY (customer_id) REFERENCES Customers(customer_id) );\nINSERT INTO Customers (customer_id, customer_name, country) VALUES (1, 'Alice', 'USA'), (2, 'Bob', 'Canada'), (3, 'Charlie', 'UK'), (4, 'David', 'Australia'), (5, 'Eve', 'India');\nINSERT INTO Orders (order_id, order_date, customer_id, amount) VALUES (101, '2024-01-15', 1, 250.00), (102, '2024-02-17', 2, 150.00), (103, '2024-03-20', 3, 200.00), (104, '2024-04-25', 4, 300.00), (105, '2024-05-28', 2, 130.00), (106, '2024-06-30', 3, 220.00);\nshow TABLES\ndrop table customers;\nALTER TABLE Orders DROP FOREIGN KEY orders_ibfk_1;\n\nDROP TABLE Orders;\nDROP TABLE Customers;\n\nshow tables;\ncreate DATABASE  join1\nCREATE TABLE Customers (\n    customer_id INT PRIMARY KEY,\n    customer_name VARCHAR(50),\n    country VARCHAR(50)\n);\n\nINSERT INTO Customers (customer_id, customer_name, country) VALUES\n(1, 'Alice', 'USA'),\n(2, 'Bob', 'Canada'),\n(3, 'Charlie', 'UK'),\n(4, 'David', 'Australia'),\n(5, 'Eve', 'India');\n\nCREATE TABLE Orders (\n    order_id INT PRIMARY KEY,\n    order_date DATE,\n    customer_id INT,\n    amount DECIMAL(10, 2),\n    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)\n);\n\nINSERT INTO Orders (order_id, order_date, customer_id, amount) VALUES\n(101, '2024-01-15', 1, 250.00),\n(102, '2024-02-17', 2, 150.00),\n(103, '2024-03-20', 3, 200.00),\n(104, '2024-04-25', 4, 300.00),\n(105, '2024-05-28', 2, 130.00),\n(106, '2024-06-30', 3, 220.00);\n\n\nselect  customers.customer_name , orders.order_id\nfrom customers \nCROSS JOIN  orders\nselect customers.customer_name,orders.order_id,orders.amount\nfrom customers\nINNER JOIN orders on customers.customer_id= orders.customer_id\nSELECT Customers.customer_name, Orders.order_id, Orders.amount\nFROM Customers\nLEFT JOIN Orders ON Customers.customer_id = Orders.customer_id;\n\nshow DATABASES\nuse join1\nCREATE TABLE Employees ( \n    id INT PRIMARY KEY, \n    name VARCHAR(100) NOT NULL, \n    salary INT NOT NULL, \n    role VARCHAR(100) NOT NULL \n);\n\nCREATE TABLE Awards( \n    id INT PRIMARY KEY, \n    employee_id INT NOT NULL, \n    award_date DATE NOT NULL \n);\n\nINSERT INTO Employees VALUES (1, 'Augustine Hammond', 10000, 'Developer'),\n (2, 'Perice Mundford', 10000, 'Manager'),\n (3, 'Cassy Delafoy', 30000, 'Developer'),\n (4, 'Garwood Saffen', 40000, 'Manager'),\n (5, 'Faydra Beaves', 50000, 'Developer');\n\nINSERT INTO Awards VALUES(1, 1, '2022-04-01');\nINSERT INTO Awards VALUES(2, 3, '2022-05-01');\n\nSELECT * from awards\nSELECT  id,name from employees\nwhere  id in (select employee_id from awards)\nSELECT  id,name from employees\nwhere  id NOT IN (select employee_id from awards)\nSELECT * FROM employees \n\nSELECT * from employees where role='Developer'\nand  salary > ALL(select salary from employees where role='Manager' )\nSELECT * from employees where role='Developer'\nand  salary > ANY(select salary from employees where role='Manager' )\n",
     "options": {
         "tabSize": 4,
         "indentSize": 4,
@@ -15,22 +15,22 @@
             {
                 "inSelectionMode": true,
                 "selectionStart": {
-                    "lineNumber": 70,
-                    "column": 63
+                    "lineNumber": 109,
+                    "column": 15
                 },
                 "position": {
-                    "lineNumber": 67,
-                    "column": 19
+                    "lineNumber": 110,
+                    "column": 1
                 }
             }
         ],
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 67,
+                "lineNumber": 104,
                 "column": 1
             },
-            "firstPositionDeltaTop": 0
+            "firstPositionDeltaTop": 93
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -77,7 +77,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "84862f50-f7d1-4d7e-e2a7-d5091eb10090"
+                        "a82dada1-7c46-4a81-e8a8-710bd69ec6df"
                     ]
                 },
                 "currentHeight": 328.796875,
@@ -97,7 +97,7 @@
             "data": [
                 {
                     "tabId": "1",
-                    "resultId": "84862f50-f7d1-4d7e-e2a7-d5091eb10090",
+                    "resultId": "a82dada1-7c46-4a81-e8a8-710bd69ec6df",
                     "rows": [
                         {
                             "0": "credit_info"
@@ -205,7 +205,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "382e12b3-1a50-439c-b400-691a7bb63dd9"
+                        "b34e90b4-22e4-4747-d263-f5fe453b64ca"
                     ]
                 },
                 "currentHeight": 36,
@@ -225,7 +225,7 @@
             "data": [
                 {
                     "tabId": "1",
-                    "resultId": "382e12b3-1a50-439c-b400-691a7bb63dd9",
+                    "resultId": "b34e90b4-22e4-4747-d263-f5fe453b64ca",
                     "rows": [
                         {
                             "0": "call_data"
@@ -286,7 +286,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "245cee23-51ed-462b-b622-49e2fb127266"
+                        "535302aa-dfba-4008-92c9-e742422df35f"
                     ]
                 },
                 "currentHeight": 351.984375,
@@ -306,7 +306,7 @@
             "data": [
                 {
                     "tabId": "1",
-                    "resultId": "245cee23-51ed-462b-b622-49e2fb127266",
+                    "resultId": "535302aa-dfba-4008-92c9-e742422df35f",
                     "rows": [
                         {
                             "0": 22,
@@ -770,7 +770,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "21c90747-7d13-4db6-e7ff-6cadc9a00660"
+                        "1a02ef9e-ff62-46b5-a8ac-f27318547377"
                     ]
                 },
                 "currentHeight": 91.1875,
@@ -790,7 +790,7 @@
             "data": [
                 {
                     "tabId": "1",
-                    "resultId": "21c90747-7d13-4db6-e7ff-6cadc9a00660",
+                    "resultId": "1a02ef9e-ff62-46b5-a8ac-f27318547377",
                     "rows": [
                         {
                             "0": 100
@@ -839,7 +839,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "62b460e6-56ad-4eff-a5ae-8ee71342e35f"
+                        "778b5722-b13d-4520-8dd2-969507eca3ab"
                     ]
                 },
                 "currentHeight": 91.1875,
@@ -859,7 +859,7 @@
             "data": [
                 {
                     "tabId": "1",
-                    "resultId": "62b460e6-56ad-4eff-a5ae-8ee71342e35f",
+                    "resultId": "778b5722-b13d-4520-8dd2-969507eca3ab",
                     "rows": [
                         {
                             "0": "16050"
@@ -910,7 +910,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "261c89c8-0040-4b96-bac8-d35cc3eed2a6"
+                        "3a9353ce-7445-44f2-c394-a24a67c093b2"
                     ]
                 },
                 "currentHeight": 91.1875,
@@ -930,7 +930,7 @@
             "data": [
                 {
                     "tabId": "1",
-                    "resultId": "261c89c8-0040-4b96-bac8-d35cc3eed2a6",
+                    "resultId": "3a9353ce-7445-44f2-c394-a24a67c093b2",
                     "rows": [
                         {
                             "0": "160.5000"
@@ -1013,7 +1013,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "17aa18a3-085d-4b36-87cd-fa0af0215257"
+                        "2bf4f5ab-0dd6-4b7c-f0e1-90b49585af1e"
                     ]
                 },
                 "currentHeight": 347.989990234375,
@@ -1033,7 +1033,7 @@
             "data": [
                 {
                     "tabId": "1",
-                    "resultId": "17aa18a3-085d-4b36-87cd-fa0af0215257",
+                    "resultId": "2bf4f5ab-0dd6-4b7c-f0e1-90b49585af1e",
                     "rows": [
                         {
                             "0": 22,
@@ -1567,7 +1567,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "097742bb-09df-4cc4-813c-b21fcd7703dd"
+                        "4449492a-72da-4b7c-d0f8-de697dcee4a1"
                     ]
                 },
                 "currentHeight": 36,
@@ -1587,7 +1587,7 @@
             "data": [
                 {
                     "tabId": "1",
-                    "resultId": "097742bb-09df-4cc4-813c-b21fcd7703dd",
+                    "resultId": "4449492a-72da-4b7c-d0f8-de697dcee4a1",
                     "rows": [
                         {
                             "0": 8051,
@@ -1971,7 +1971,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "2765ee6c-a3ac-4d53-bcdc-12b3ca602d4f"
+                        "38223995-9088-4107-c7cc-8af8a0b9cc17"
                     ]
                 },
                 "currentHeight": 352,
@@ -1991,7 +1991,7 @@
             "data": [
                 {
                     "tabId": "1",
-                    "resultId": "2765ee6c-a3ac-4d53-bcdc-12b3ca602d4f",
+                    "resultId": "38223995-9088-4107-c7cc-8af8a0b9cc17",
                     "rows": [
                         {
                             "0": " Benjamin Wilson",
@@ -2302,7 +2302,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "7800de49-0fe0-47fc-db8f-5742eeda0dff"
+                        "bad09cde-7f5e-46d4-8459-9dced4157946"
                     ]
                 },
                 "currentHeight": 36,
@@ -2322,7 +2322,7 @@
             "data": [
                 {
                     "tabId": "1",
-                    "resultId": "7800de49-0fe0-47fc-db8f-5742eeda0dff",
+                    "resultId": "bad09cde-7f5e-46d4-8459-9dced4157946",
                     "rows": [
                         {
                             "0": "call_data"
@@ -2521,7 +2521,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "b861a451-ced3-40eb-ebac-bc89dfd12a75"
+                        "a04121fc-1764-4c85-d632-bea3254b1f83"
                     ]
                 },
                 "currentHeight": 36,
@@ -2541,7 +2541,7 @@
             "data": [
                 {
                     "tabId": "1",
-                    "resultId": "b861a451-ced3-40eb-ebac-bc89dfd12a75",
+                    "resultId": "a04121fc-1764-4c85-d632-bea3254b1f83",
                     "rows": [
                         {
                             "0": "call_data"
@@ -2746,7 +2746,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "3e4046e8-6f4a-4ab8-f984-1079e655a481"
+                        "ed67757d-01c5-4926-fb14-a23fd9d85c3a"
                     ]
                 },
                 "currentHeight": 352,
@@ -2766,7 +2766,7 @@
             "data": [
                 {
                     "tabId": "1",
-                    "resultId": "3e4046e8-6f4a-4ab8-f984-1079e655a481",
+                    "resultId": "ed67757d-01c5-4926-fb14-a23fd9d85c3a",
                     "rows": [
                         {
                             "0": "Eve",
@@ -2950,7 +2950,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "ac381be7-ba95-422c-c02a-57a74128eb99"
+                        "c85f2a1f-39e9-4ab5-9dd9-2e8c216c2d29"
                     ]
                 },
                 "currentHeight": 209.796875,
@@ -2970,7 +2970,7 @@
             "data": [
                 {
                     "tabId": "1",
-                    "resultId": "ac381be7-ba95-422c-c02a-57a74128eb99",
+                    "resultId": "c85f2a1f-39e9-4ab5-9dd9-2e8c216c2d29",
                     "rows": [
                         {
                             "0": "Alice",
@@ -3086,7 +3086,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "e92466a0-f1fc-4d04-a752-557ed93c36ff"
+                        "94b998d6-92ae-4c65-e539-6c0123c0a0aa"
                     ]
                 },
                 "currentHeight": 36,
@@ -3115,7 +3115,7 @@
             "data": [
                 {
                     "tabId": "1",
-                    "resultId": "e92466a0-f1fc-4d04-a752-557ed93c36ff",
+                    "resultId": "94b998d6-92ae-4c65-e539-6c0123c0a0aa",
                     "rows": [
                         {
                             "0": "Alice",
@@ -3232,6 +3232,1025 @@
             "state": {
                 "start": 75,
                 "end": 75,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "f7563393-e893-4cb0-dc75-5fec3ef294a1"
+                    ]
+                },
+                "currentHeight": 36,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 14
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "1",
+                    "resultId": "f7563393-e893-4cb0-dc75-5fec3ef294a1",
+                    "rows": [
+                        {
+                            "0": "credit_info"
+                        },
+                        {
+                            "0": "data"
+                        },
+                        {
+                            "0": "information_schema"
+                        },
+                        {
+                            "0": "join1"
+                        },
+                        {
+                            "0": "joins_practice"
+                        },
+                        {
+                            "0": "mysql"
+                        },
+                        {
+                            "0": "new"
+                        },
+                        {
+                            "0": "new-table"
+                        },
+                        {
+                            "0": "performance_schema"
+                        },
+                        {
+                            "0": "sakila"
+                        },
+                        {
+                            "0": "sys"
+                        },
+                        {
+                            "0": "world"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Database",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 12 records retrieved in 5.071ms"
+                    },
+                    "totalRowCount": 12,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "show DATABASES",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 76,
+                "end": 76,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "46170716-8cbb-495a-c8f1-be60c5e54d4a",
+                            "content": "OK, 0 records retrieved in 6.225ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 9
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 77,
+                "end": 83,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "0e9d5c57-dbfb-414b-8184-194c8093378e",
+                            "content": "OK, 0 records retrieved in 106.025ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 144
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 144,
+                            "length": 1
+                        },
+                        "contentStart": 143,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 84,
+                "end": 89,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "126595d5-208e-4250-adbb-51d1434844ac",
+                            "content": "OK, 0 records retrieved in 36.449ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 110
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 110,
+                            "length": 1
+                        },
+                        "contentStart": 109,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 90,
+                "end": 95,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "298ac6ef-4de9-4d1f-e7dd-615cdaa00968",
+                            "content": "OK, 5 rows affected in 19.067ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 245
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 245,
+                            "length": 1
+                        },
+                        "contentStart": 244,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 96,
+                "end": 98,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "d164ed95-bb85-40ba-edfa-1a7ad04b849b",
+                            "content": "OK, 1 row affected in 6.854ms"
+                        },
+                        {
+                            "type": 4,
+                            "index": 1,
+                            "resultId": "a4e42df1-18c4-4b1f-9207-59a09d6c289d",
+                            "content": "OK, 1 row affected in 6.886ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 46
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 46,
+                            "length": 47
+                        },
+                        "contentStart": 47,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 93,
+                            "length": 1
+                        },
+                        "contentStart": 92,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 99,
+                "end": 99,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "821f3e3f-9f6c-4de5-ffe9-e2a568f60acd"
+                    ]
+                },
+                "currentHeight": 36,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 20
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "1",
+                    "resultId": "821f3e3f-9f6c-4de5-ffe9-e2a568f60acd",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": 1,
+                            "2": "2022-04-01"
+                        },
+                        {
+                            "0": 2,
+                            "1": 3,
+                            "2": "2022-05-01"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": true,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "employee_id",
+                            "field": "1",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "award_date",
+                            "field": "2",
+                            "dataType": {
+                                "type": 27,
+                                "needsQuotes": true
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 2 records retrieved in 1.509ms"
+                    },
+                    "totalRowCount": 2,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT * from awards",
+                    "updatable": true,
+                    "fullTableName": "awards"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 100,
+                "end": 101,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "1cf9d8b6-4023-4c91-9e06-6f007f4775d3"
+                    ]
+                },
+                "currentHeight": 36,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 76
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "1",
+                    "resultId": "1cf9d8b6-4023-4c91-9e06-6f007f4775d3",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "Augustine Hammond"
+                        },
+                        {
+                            "0": 3,
+                            "1": "Cassy Delafoy"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 2 records retrieved in 3.012ms"
+                    },
+                    "totalRowCount": 2,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT  id,name from employees\nwhere  id in (select employee_id from awards)",
+                    "updatable": true,
+                    "fullTableName": ""
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 102,
+                "end": 103,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "539cf286-51fe-4158-c6e9-ca3689ef3189"
+                    ]
+                },
+                "currentHeight": 138.390625,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 80
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "1",
+                    "resultId": "539cf286-51fe-4158-c6e9-ca3689ef3189",
+                    "rows": [
+                        {
+                            "0": 2,
+                            "1": "Perice Mundford"
+                        },
+                        {
+                            "0": 4,
+                            "1": "Garwood Saffen"
+                        },
+                        {
+                            "0": 5,
+                            "1": "Faydra Beaves"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 3 records retrieved in 2.171ms"
+                    },
+                    "totalRowCount": 3,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT  id,name from employees\nwhere  id NOT IN (select employee_id from awards)",
+                    "updatable": true,
+                    "fullTableName": ""
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 104,
+                "end": 105,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "8f6c8456-0195-489a-f6fe-ff1dc674f172"
+                    ]
+                },
+                "currentHeight": 202.796875,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 25
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "1",
+                    "resultId": "8f6c8456-0195-489a-f6fe-ff1dc674f172",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "Augustine Hammond",
+                            "2": 10000,
+                            "3": "Developer"
+                        },
+                        {
+                            "0": 2,
+                            "1": "Perice Mundford",
+                            "2": 10000,
+                            "3": "Manager"
+                        },
+                        {
+                            "0": 3,
+                            "1": "Cassy Delafoy",
+                            "2": 30000,
+                            "3": "Developer"
+                        },
+                        {
+                            "0": 4,
+                            "1": "Garwood Saffen",
+                            "2": 40000,
+                            "3": "Manager"
+                        },
+                        {
+                            "0": 5,
+                            "1": "Faydra Beaves",
+                            "2": 50000,
+                            "3": "Developer"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": true,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "salary",
+                            "field": "2",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "role",
+                            "field": "3",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 5 records retrieved in 1.022ms"
+                    },
+                    "totalRowCount": 5,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT * FROM employees \n",
+                    "updatable": true,
+                    "fullTableName": "employees"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 106,
+                "end": 107,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "74b193d8-88ae-4b61-f09b-9ef8452f62c9"
+                    ]
+                },
+                "currentHeight": 90.796875,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 116
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "1",
+                    "resultId": "74b193d8-88ae-4b61-f09b-9ef8452f62c9",
+                    "rows": [
+                        {
+                            "0": 5,
+                            "1": "Faydra Beaves",
+                            "2": 50000,
+                            "3": "Developer"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "salary",
+                            "field": "2",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "role",
+                            "field": "3",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 1 record retrieved in 5.333ms"
+                    },
+                    "totalRowCount": 1,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT * from employees where role='Developer'\nand  salary > ALL(select salary from employees where role='Manager' )",
+                    "updatable": true,
+                    "fullTableName": ""
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 108,
+                "end": 109,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "6546080f-ab55-4beb-e5ff-4a3ad992f497"
+                    ]
+                },
+                "currentHeight": 113.80001068115234,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 116
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "1",
+                    "resultId": "6546080f-ab55-4beb-e5ff-4a3ad992f497",
+                    "rows": [
+                        {
+                            "0": 3,
+                            "1": "Cassy Delafoy",
+                            "2": 30000,
+                            "3": "Developer"
+                        },
+                        {
+                            "0": 5,
+                            "1": "Faydra Beaves",
+                            "2": 50000,
+                            "3": "Developer"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "salary",
+                            "field": "2",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "role",
+                            "field": "3",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 2 records retrieved in 1.518ms"
+                    },
+                    "totalRowCount": 2,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT * from employees where role='Developer'\nand  salary > ANY(select salary from employees where role='Manager' )",
+                    "updatable": true,
+                    "fullTableName": ""
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 110,
+                "end": 110,
                 "language": "mysql",
                 "currentSet": 1,
                 "statements": [
