@@ -1,0 +1,2102 @@
+{
+    "type": "MySQLNotebook",
+    "version": "1.0",
+    "caption": "DB Notebook",
+    "content": "\\about\nshow DATABASES\nuse data\n\ndesc company_data\nselect * from call_data where issue_id like '11%'\nSHOW TABLES\nSELECT cd.company,c.address\nfrom call_data cd \nCROSS JOIN company_data c \nselect company  as com from call_data\n1,2,3   4,5,6\n1->4\n1->5\n1->6\n2->4\n2->5\n2->6\n3->4\n3->5\n3->6\n\n",
+    "options": {
+        "tabSize": 4,
+        "indentSize": 4,
+        "insertSpaces": true,
+        "defaultEOL": "LF",
+        "trimAutoWhitespace": true
+    },
+    "viewState": {
+        "cursorState": [
+            {
+                "inSelectionMode": false,
+                "selectionStart": {
+                    "lineNumber": 20,
+                    "column": 5
+                },
+                "position": {
+                    "lineNumber": 20,
+                    "column": 5
+                }
+            }
+        ],
+        "viewState": {
+            "scrollLeft": 0,
+            "firstPosition": {
+                "lineNumber": 11,
+                "column": 1
+            },
+            "firstPositionDeltaTop": 24
+        },
+        "contributionsState": {
+            "editor.contrib.folding": {},
+            "editor.contrib.wordHighlighter": false
+        }
+    },
+    "contexts": [
+        {
+            "state": {
+                "start": 1,
+                "end": 1,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "content": "Welcome to the MySQL Shell - DB Notebook.\n\nPress Ctrl+Enter to execute the code block.\n\nExecute \\sql to switch to SQL, \\js to JavaScript and \\ts to TypeScript mode.\nExecute \\help or \\? for help;",
+                            "language": "ansi"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 6
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 2,
+                "end": 2,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "d0209ad2-bd2c-4df3-be08-1379c6cece2c"
+                    ]
+                },
+                "currentHeight": 36,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 14
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "1",
+                    "resultId": "d0209ad2-bd2c-4df3-be08-1379c6cece2c",
+                    "rows": [
+                        {
+                            "0": "credit_info"
+                        },
+                        {
+                            "0": "data"
+                        },
+                        {
+                            "0": "information_schema"
+                        },
+                        {
+                            "0": "join1"
+                        },
+                        {
+                            "0": "joins_practice"
+                        },
+                        {
+                            "0": "mysql"
+                        },
+                        {
+                            "0": "new"
+                        },
+                        {
+                            "0": "new-table"
+                        },
+                        {
+                            "0": "performance_schema"
+                        },
+                        {
+                            "0": "sakila"
+                        },
+                        {
+                            "0": "sys"
+                        },
+                        {
+                            "0": "world"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Database",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 12 records retrieved in 6.016ms"
+                    },
+                    "totalRowCount": 12,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "show DATABASES",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 3,
+                "end": 4,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "f1001922-f139-4aed-bca5-24ba455a6c62",
+                            "content": "OK, 0 records retrieved in 2.352ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 9
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 5,
+                "end": 5,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "82bfc87e-e35b-4ea8-bb13-cef7176001d5"
+                    ]
+                },
+                "currentHeight": 36,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 17
+                        },
+                        "contentStart": 1,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "1",
+                    "resultId": "82bfc87e-e35b-4ea8-bb13-cef7176001d5",
+                    "rows": [
+                        {
+                            "0": "id",
+                            "1": "int",
+                            "2": "YES",
+                            "3": "",
+                            "4": null,
+                            "5": ""
+                        },
+                        {
+                            "0": "company",
+                            "1": "varchar(266)",
+                            "2": "YES",
+                            "3": "",
+                            "4": null,
+                            "5": ""
+                        },
+                        {
+                            "0": "address",
+                            "1": "varchar(445)",
+                            "2": "YES",
+                            "3": "",
+                            "4": null,
+                            "5": ""
+                        },
+                        {
+                            "0": "phone",
+                            "1": "decimal(18,0)",
+                            "2": "YES",
+                            "3": "",
+                            "4": null,
+                            "5": ""
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Field",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Type",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Null",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Key",
+                            "field": "3",
+                            "dataType": {
+                                "type": 43,
+                                "needsQuotes": true
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Default",
+                            "field": "4",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Extra",
+                            "field": "5",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 4 records retrieved in 22.105ms"
+                    },
+                    "totalRowCount": 4,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "desc company_data",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 6,
+                "end": 6,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "4ec91992-5b75-43e0-9874-3eb7ddc26755"
+                    ]
+                },
+                "currentHeight": 36,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 49
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "1",
+                    "resultId": "4ec91992-5b75-43e0-9874-3eb7ddc26755",
+                    "rows": [
+                        {
+                            "0": 8049,
+                            "1": "2024-10-20 19:36:00",
+                            "2": 178,
+                            "3": 26,
+                            "4": 117,
+                            "5": 159,
+                            "6": 261,
+                            "7": 328,
+                            "8": 4,
+                            "9": 3
+                        },
+                        {
+                            "0": 8050,
+                            "1": "2024-10-20 19:36:02",
+                            "2": 169,
+                            "3": 23,
+                            "4": 119,
+                            "5": 117,
+                            "6": 126,
+                            "7": 316,
+                            "8": 1,
+                            "9": 8
+                        },
+                        {
+                            "0": 8052,
+                            "1": "2024-10-20 19:36:06",
+                            "2": 114,
+                            "3": 13,
+                            "4": 118,
+                            "5": 116,
+                            "6": 10,
+                            "7": 339,
+                            "8": 1,
+                            "9": 5
+                        },
+                        {
+                            "0": 8053,
+                            "1": "2024-10-20 19:36:08",
+                            "2": 176,
+                            "3": 14,
+                            "4": 118,
+                            "5": 161,
+                            "6": 167,
+                            "7": 191,
+                            "8": 1,
+                            "9": 6
+                        },
+                        {
+                            "0": 8054,
+                            "1": "2024-10-20 19:36:10",
+                            "2": 115,
+                            "3": 15,
+                            "4": 118,
+                            "5": 141,
+                            "6": 182,
+                            "7": 507,
+                            "8": 2,
+                            "9": 4
+                        },
+                        {
+                            "0": 8058,
+                            "1": "2024-10-20 19:36:18",
+                            "2": 165,
+                            "3": 26,
+                            "4": 117,
+                            "5": 171,
+                            "6": 202,
+                            "7": 199,
+                            "8": 1,
+                            "9": 5
+                        },
+                        {
+                            "0": 8061,
+                            "1": "2024-10-20 19:36:24",
+                            "2": 138,
+                            "3": 21,
+                            "4": 117,
+                            "5": 126,
+                            "6": 230,
+                            "7": 92,
+                            "8": 1,
+                            "9": 5
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": true,
+                            "nullable": false,
+                            "autoIncrement": true
+                        },
+                        {
+                            "title": "date",
+                            "field": "1",
+                            "dataType": {
+                                "type": 26,
+                                "dateTimePrecision": 8,
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "location_id",
+                            "field": "2",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "company",
+                            "field": "3",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "issue_id",
+                            "field": "4",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "csr_id",
+                            "field": "5",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "response_time",
+                            "field": "6",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "call_time",
+                            "field": "7",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "status",
+                            "field": "8",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "rating",
+                            "field": "9",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 7 records retrieved in 1.522ms"
+                    },
+                    "totalRowCount": 7,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "select * from call_data where issue_id like '11%'",
+                    "updatable": true,
+                    "fullTableName": "call_data"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 7,
+                "end": 7,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "3578733b-b988-4b8e-9e3b-a5c49cfc5009"
+                    ]
+                },
+                "currentHeight": 36,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 11
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "1",
+                    "resultId": "3578733b-b988-4b8e-9e3b-a5c49cfc5009",
+                    "rows": [
+                        {
+                            "0": "call_data"
+                        },
+                        {
+                            "0": "company_data"
+                        },
+                        {
+                            "0": "customer_table"
+                        },
+                        {
+                            "0": "customers"
+                        },
+                        {
+                            "0": "issue_table"
+                        },
+                        {
+                            "0": "location"
+                        },
+                        {
+                            "0": "orders"
+                        },
+                        {
+                            "0": "status"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Tables_in_data",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 8 records retrieved in 3.024ms"
+                    },
+                    "totalRowCount": 8,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SHOW TABLES",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 8,
+                "end": 10,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "467c9bee-afc1-4e99-e683-c333adf9bdee"
+                    ]
+                },
+                "currentHeight": 352,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 73
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "1",
+                    "resultId": "467c9bee-afc1-4e99-e683-c333adf9bdee",
+                    "rows": [
+                        {
+                            "0": 21,
+                            "1": "New York City, USA"
+                        },
+                        {
+                            "0": 12,
+                            "1": "New York City, USA"
+                        },
+                        {
+                            "0": 26,
+                            "1": "New York City, USA"
+                        },
+                        {
+                            "0": 25,
+                            "1": "New York City, USA"
+                        },
+                        {
+                            "0": 11,
+                            "1": "New York City, USA"
+                        },
+                        {
+                            "0": 15,
+                            "1": "New York City, USA"
+                        },
+                        {
+                            "0": 14,
+                            "1": "New York City, USA"
+                        },
+                        {
+                            "0": 13,
+                            "1": "New York City, USA"
+                        },
+                        {
+                            "0": 27,
+                            "1": "New York City, USA"
+                        },
+                        {
+                            "0": 23,
+                            "1": "New York City, USA"
+                        },
+                        {
+                            "0": 26,
+                            "1": "New York City, USA"
+                        },
+                        {
+                            "0": 23,
+                            "1": "New York City, USA"
+                        },
+                        {
+                            "0": 25,
+                            "1": "New York City, USA"
+                        },
+                        {
+                            "0": 21,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 12,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 11,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 15,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 14,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 13,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 27,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 21,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 12,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 11,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 15,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 14,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 13,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 27,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Los Angeles, USA"
+                        },
+                        {
+                            "0": 21,
+                            "1": "Paris, France"
+                        },
+                        {
+                            "0": 12,
+                            "1": "Paris, France"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Paris, France"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Paris, France"
+                        },
+                        {
+                            "0": 11,
+                            "1": "Paris, France"
+                        },
+                        {
+                            "0": 15,
+                            "1": "Paris, France"
+                        },
+                        {
+                            "0": 14,
+                            "1": "Paris, France"
+                        },
+                        {
+                            "0": 13,
+                            "1": "Paris, France"
+                        },
+                        {
+                            "0": 27,
+                            "1": "Paris, France"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Paris, France"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Paris, France"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Paris, France"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Paris, France"
+                        },
+                        {
+                            "0": 21,
+                            "1": "London, UK"
+                        },
+                        {
+                            "0": 12,
+                            "1": "London, UK"
+                        },
+                        {
+                            "0": 26,
+                            "1": "London, UK"
+                        },
+                        {
+                            "0": 25,
+                            "1": "London, UK"
+                        },
+                        {
+                            "0": 11,
+                            "1": "London, UK"
+                        },
+                        {
+                            "0": 15,
+                            "1": "London, UK"
+                        },
+                        {
+                            "0": 14,
+                            "1": "London, UK"
+                        },
+                        {
+                            "0": 13,
+                            "1": "London, UK"
+                        },
+                        {
+                            "0": 27,
+                            "1": "London, UK"
+                        },
+                        {
+                            "0": 23,
+                            "1": "London, UK"
+                        },
+                        {
+                            "0": 26,
+                            "1": "London, UK"
+                        },
+                        {
+                            "0": 23,
+                            "1": "London, UK"
+                        },
+                        {
+                            "0": 25,
+                            "1": "London, UK"
+                        },
+                        {
+                            "0": 21,
+                            "1": "Tokyo, Japan"
+                        },
+                        {
+                            "0": 12,
+                            "1": "Tokyo, Japan"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Tokyo, Japan"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Tokyo, Japan"
+                        },
+                        {
+                            "0": 11,
+                            "1": "Tokyo, Japan"
+                        },
+                        {
+                            "0": 15,
+                            "1": "Tokyo, Japan"
+                        },
+                        {
+                            "0": 14,
+                            "1": "Tokyo, Japan"
+                        },
+                        {
+                            "0": 13,
+                            "1": "Tokyo, Japan"
+                        },
+                        {
+                            "0": 27,
+                            "1": "Tokyo, Japan"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Tokyo, Japan"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Tokyo, Japan"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Tokyo, Japan"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Tokyo, Japan"
+                        },
+                        {
+                            "0": 21,
+                            "1": "Sydney, Australia"
+                        },
+                        {
+                            "0": 12,
+                            "1": "Sydney, Australia"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Sydney, Australia"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Sydney, Australia"
+                        },
+                        {
+                            "0": 11,
+                            "1": "Sydney, Australia"
+                        },
+                        {
+                            "0": 15,
+                            "1": "Sydney, Australia"
+                        },
+                        {
+                            "0": 14,
+                            "1": "Sydney, Australia"
+                        },
+                        {
+                            "0": 13,
+                            "1": "Sydney, Australia"
+                        },
+                        {
+                            "0": 27,
+                            "1": "Sydney, Australia"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Sydney, Australia"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Sydney, Australia"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Sydney, Australia"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Sydney, Australia"
+                        },
+                        {
+                            "0": 21,
+                            "1": "Hong Kong, China"
+                        },
+                        {
+                            "0": 12,
+                            "1": "Hong Kong, China"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Hong Kong, China"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Hong Kong, China"
+                        },
+                        {
+                            "0": 11,
+                            "1": "Hong Kong, China"
+                        },
+                        {
+                            "0": 15,
+                            "1": "Hong Kong, China"
+                        },
+                        {
+                            "0": 14,
+                            "1": "Hong Kong, China"
+                        },
+                        {
+                            "0": 13,
+                            "1": "Hong Kong, China"
+                        },
+                        {
+                            "0": 27,
+                            "1": "Hong Kong, China"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Hong Kong, China"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Hong Kong, China"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Hong Kong, China"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Hong Kong, China"
+                        },
+                        {
+                            "0": 21,
+                            "1": "Rome, Italy"
+                        },
+                        {
+                            "0": 12,
+                            "1": "Rome, Italy"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Rome, Italy"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Rome, Italy"
+                        },
+                        {
+                            "0": 11,
+                            "1": "Rome, Italy"
+                        },
+                        {
+                            "0": 15,
+                            "1": "Rome, Italy"
+                        },
+                        {
+                            "0": 14,
+                            "1": "Rome, Italy"
+                        },
+                        {
+                            "0": 13,
+                            "1": "Rome, Italy"
+                        },
+                        {
+                            "0": 27,
+                            "1": "Rome, Italy"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Rome, Italy"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Rome, Italy"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Rome, Italy"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Rome, Italy"
+                        },
+                        {
+                            "0": 21,
+                            "1": "Barcelona, Spain"
+                        },
+                        {
+                            "0": 12,
+                            "1": "Barcelona, Spain"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Barcelona, Spain"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Barcelona, Spain"
+                        },
+                        {
+                            "0": 11,
+                            "1": "Barcelona, Spain"
+                        },
+                        {
+                            "0": 15,
+                            "1": "Barcelona, Spain"
+                        },
+                        {
+                            "0": 14,
+                            "1": "Barcelona, Spain"
+                        },
+                        {
+                            "0": 13,
+                            "1": "Barcelona, Spain"
+                        },
+                        {
+                            "0": 27,
+                            "1": "Barcelona, Spain"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Barcelona, Spain"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Barcelona, Spain"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Barcelona, Spain"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Barcelona, Spain"
+                        },
+                        {
+                            "0": 21,
+                            "1": "Dubai, UAE"
+                        },
+                        {
+                            "0": 12,
+                            "1": "Dubai, UAE"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Dubai, UAE"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Dubai, UAE"
+                        },
+                        {
+                            "0": 11,
+                            "1": "Dubai, UAE"
+                        },
+                        {
+                            "0": 15,
+                            "1": "Dubai, UAE"
+                        },
+                        {
+                            "0": 14,
+                            "1": "Dubai, UAE"
+                        },
+                        {
+                            "0": 13,
+                            "1": "Dubai, UAE"
+                        },
+                        {
+                            "0": 27,
+                            "1": "Dubai, UAE"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Dubai, UAE"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Dubai, UAE"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Dubai, UAE"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Dubai, UAE"
+                        },
+                        {
+                            "0": 21,
+                            "1": "Singapore"
+                        },
+                        {
+                            "0": 12,
+                            "1": "Singapore"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Singapore"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Singapore"
+                        },
+                        {
+                            "0": 11,
+                            "1": "Singapore"
+                        },
+                        {
+                            "0": 15,
+                            "1": "Singapore"
+                        },
+                        {
+                            "0": 14,
+                            "1": "Singapore"
+                        },
+                        {
+                            "0": 13,
+                            "1": "Singapore"
+                        },
+                        {
+                            "0": 27,
+                            "1": "Singapore"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Singapore"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Singapore"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Singapore"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Singapore"
+                        },
+                        {
+                            "0": 21,
+                            "1": "Moscow, Russia"
+                        },
+                        {
+                            "0": 12,
+                            "1": "Moscow, Russia"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Moscow, Russia"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Moscow, Russia"
+                        },
+                        {
+                            "0": 11,
+                            "1": "Moscow, Russia"
+                        },
+                        {
+                            "0": 15,
+                            "1": "Moscow, Russia"
+                        },
+                        {
+                            "0": 14,
+                            "1": "Moscow, Russia"
+                        },
+                        {
+                            "0": 13,
+                            "1": "Moscow, Russia"
+                        },
+                        {
+                            "0": 27,
+                            "1": "Moscow, Russia"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Moscow, Russia"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Moscow, Russia"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Moscow, Russia"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Moscow, Russia"
+                        },
+                        {
+                            "0": 21,
+                            "1": "Rio de Janeiro, Brazil"
+                        },
+                        {
+                            "0": 12,
+                            "1": "Rio de Janeiro, Brazil"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Rio de Janeiro, Brazil"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Rio de Janeiro, Brazil"
+                        },
+                        {
+                            "0": 11,
+                            "1": "Rio de Janeiro, Brazil"
+                        },
+                        {
+                            "0": 15,
+                            "1": "Rio de Janeiro, Brazil"
+                        },
+                        {
+                            "0": 14,
+                            "1": "Rio de Janeiro, Brazil"
+                        },
+                        {
+                            "0": 13,
+                            "1": "Rio de Janeiro, Brazil"
+                        },
+                        {
+                            "0": 27,
+                            "1": "Rio de Janeiro, Brazil"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Rio de Janeiro, Brazil"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Rio de Janeiro, Brazil"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Rio de Janeiro, Brazil"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Rio de Janeiro, Brazil"
+                        },
+                        {
+                            "0": 21,
+                            "1": "Toronto, Canada"
+                        },
+                        {
+                            "0": 12,
+                            "1": "Toronto, Canada"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Toronto, Canada"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Toronto, Canada"
+                        },
+                        {
+                            "0": 11,
+                            "1": "Toronto, Canada"
+                        },
+                        {
+                            "0": 15,
+                            "1": "Toronto, Canada"
+                        },
+                        {
+                            "0": 14,
+                            "1": "Toronto, Canada"
+                        },
+                        {
+                            "0": 13,
+                            "1": "Toronto, Canada"
+                        },
+                        {
+                            "0": 27,
+                            "1": "Toronto, Canada"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Toronto, Canada"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Toronto, Canada"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Toronto, Canada"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Toronto, Canada"
+                        },
+                        {
+                            "0": 21,
+                            "1": "Amsterdam, Netherlands"
+                        },
+                        {
+                            "0": 12,
+                            "1": "Amsterdam, Netherlands"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Amsterdam, Netherlands"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Amsterdam, Netherlands"
+                        },
+                        {
+                            "0": 11,
+                            "1": "Amsterdam, Netherlands"
+                        },
+                        {
+                            "0": 15,
+                            "1": "Amsterdam, Netherlands"
+                        },
+                        {
+                            "0": 14,
+                            "1": "Amsterdam, Netherlands"
+                        },
+                        {
+                            "0": 13,
+                            "1": "Amsterdam, Netherlands"
+                        },
+                        {
+                            "0": 27,
+                            "1": "Amsterdam, Netherlands"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Amsterdam, Netherlands"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Amsterdam, Netherlands"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Amsterdam, Netherlands"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Amsterdam, Netherlands"
+                        },
+                        {
+                            "0": 21,
+                            "1": "Berlin, Germany"
+                        },
+                        {
+                            "0": 12,
+                            "1": "Berlin, Germany"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Berlin, Germany"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Berlin, Germany"
+                        },
+                        {
+                            "0": 11,
+                            "1": "Berlin, Germany"
+                        },
+                        {
+                            "0": 15,
+                            "1": "Berlin, Germany"
+                        },
+                        {
+                            "0": 14,
+                            "1": "Berlin, Germany"
+                        },
+                        {
+                            "0": 13,
+                            "1": "Berlin, Germany"
+                        },
+                        {
+                            "0": 27,
+                            "1": "Berlin, Germany"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Berlin, Germany"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Berlin, Germany"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Berlin, Germany"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Berlin, Germany"
+                        },
+                        {
+                            "0": 21,
+                            "1": "Mumbai, India"
+                        },
+                        {
+                            "0": 12,
+                            "1": "Mumbai, India"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Mumbai, India"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Mumbai, India"
+                        },
+                        {
+                            "0": 11,
+                            "1": "Mumbai, India"
+                        },
+                        {
+                            "0": 15,
+                            "1": "Mumbai, India"
+                        },
+                        {
+                            "0": 14,
+                            "1": "Mumbai, India"
+                        },
+                        {
+                            "0": 13,
+                            "1": "Mumbai, India"
+                        },
+                        {
+                            "0": 27,
+                            "1": "Mumbai, India"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Mumbai, India"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Mumbai, India"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Mumbai, India"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Mumbai, India"
+                        },
+                        {
+                            "0": 21,
+                            "1": "Buenos Aires, Argentina"
+                        },
+                        {
+                            "0": 12,
+                            "1": "Buenos Aires, Argentina"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Buenos Aires, Argentina"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Buenos Aires, Argentina"
+                        },
+                        {
+                            "0": 11,
+                            "1": "Buenos Aires, Argentina"
+                        },
+                        {
+                            "0": 15,
+                            "1": "Buenos Aires, Argentina"
+                        },
+                        {
+                            "0": 14,
+                            "1": "Buenos Aires, Argentina"
+                        },
+                        {
+                            "0": 13,
+                            "1": "Buenos Aires, Argentina"
+                        },
+                        {
+                            "0": 27,
+                            "1": "Buenos Aires, Argentina"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Buenos Aires, Argentina"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Buenos Aires, Argentina"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Buenos Aires, Argentina"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Buenos Aires, Argentina"
+                        },
+                        {
+                            "0": 21,
+                            "1": "Shanghai, China"
+                        },
+                        {
+                            "0": 12,
+                            "1": "Shanghai, China"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Shanghai, China"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Shanghai, China"
+                        },
+                        {
+                            "0": 11,
+                            "1": "Shanghai, China"
+                        },
+                        {
+                            "0": 15,
+                            "1": "Shanghai, China"
+                        },
+                        {
+                            "0": 14,
+                            "1": "Shanghai, China"
+                        },
+                        {
+                            "0": 13,
+                            "1": "Shanghai, China"
+                        },
+                        {
+                            "0": 27,
+                            "1": "Shanghai, China"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Shanghai, China"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Shanghai, China"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Shanghai, China"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Shanghai, China"
+                        },
+                        {
+                            "0": 21,
+                            "1": "Istanbul, Turkey"
+                        },
+                        {
+                            "0": 12,
+                            "1": "Istanbul, Turkey"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Istanbul, Turkey"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Istanbul, Turkey"
+                        },
+                        {
+                            "0": 11,
+                            "1": "Istanbul, Turkey"
+                        },
+                        {
+                            "0": 15,
+                            "1": "Istanbul, Turkey"
+                        },
+                        {
+                            "0": 14,
+                            "1": "Istanbul, Turkey"
+                        },
+                        {
+                            "0": 13,
+                            "1": "Istanbul, Turkey"
+                        },
+                        {
+                            "0": 27,
+                            "1": "Istanbul, Turkey"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Istanbul, Turkey"
+                        },
+                        {
+                            "0": 26,
+                            "1": "Istanbul, Turkey"
+                        },
+                        {
+                            "0": 23,
+                            "1": "Istanbul, Turkey"
+                        },
+                        {
+                            "0": 25,
+                            "1": "Istanbul, Turkey"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "company",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "address",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 273 records retrieved in 2.001ms"
+                    },
+                    "totalRowCount": 273,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT cd.company,c.address\nfrom call_data cd \nCROSS JOIN company_data c ",
+                    "updatable": false,
+                    "fullTableName": ""
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 11,
+                "end": 11,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "e3c0a21a-0bb0-4b9c-98ab-23a5120d9264"
+                    ]
+                },
+                "currentHeight": 352,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 37
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "1",
+                    "resultId": "e3c0a21a-0bb0-4b9c-98ab-23a5120d9264",
+                    "rows": [
+                        {
+                            "0": 25
+                        },
+                        {
+                            "0": 23
+                        },
+                        {
+                            "0": 26
+                        },
+                        {
+                            "0": 23
+                        },
+                        {
+                            "0": 27
+                        },
+                        {
+                            "0": 13
+                        },
+                        {
+                            "0": 14
+                        },
+                        {
+                            "0": 15
+                        },
+                        {
+                            "0": 11
+                        },
+                        {
+                            "0": 25
+                        },
+                        {
+                            "0": 26
+                        },
+                        {
+                            "0": 12
+                        },
+                        {
+                            "0": 21
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "com",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 13 records retrieved in 1.508ms"
+                    },
+                    "totalRowCount": 13,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "select company  as com from call_data",
+                    "updatable": false,
+                    "fullTableName": "call_data"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 12,
+                "end": 23,
+                "language": "mysql",
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 60
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        }
+    ]
+}
